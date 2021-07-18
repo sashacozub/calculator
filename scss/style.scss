@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400&display=swap');
+
+$main-dark: #1E1244;
+$special-one: #DC32E8;
+$special-two: #36DAF3;
+$accent-one: #FF9C00;
+$accent-two: #FDEC37;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+}
+
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #DC32E8, #36DAF3);
+    border: 10px solid #fff;
+    text-align: center;
+    z-index: 2;
+
+    h1 {
+        color: #fff;
+        padding: 35px 0px;
+        text-shadow: 3px 3px 0px #000;
+        z-index: 3;
+    }
+
+    &::before {
+        content: '';
+        background: url('../img/palms.png');
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .calculator {
+        width: 300px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        border: 1px solid $main-dark;
+        box-shadow: 7px 7px 0px $main-dark;
+        z-index: 3;
+        margin-bottom: 35px;
+
+        .display {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 5%;
+            font-size: 2rem;
+            border: 1px solid $main-dark;
+
+            p {
+                width: 100%;
+                text-align: end;
+                word-wrap: break-word;
+            }
+        }
+
+        .buttons {
+            height: 80%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            background-color: $main-dark;
+        }
+
+        button {
+            background-color: #fff;
+            border: 1px solid $main-dark;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 25px;
+            font-weight: 200;
+            cursor: pointer;
+
+            &[data-number]:hover {
+                background-color: #c5a6f3;
+            }
+
+            &:active {
+                transform: scale(0.97);
+            }
+
+            &[data-clear] {
+                grid-column: span 2;
+            }
+
+            &[data-equals] {
+                grid-column: span 1;
+            }
+        }
+
+        .temp {
+            grid-column: span 2;
+        }
+
+        .clearing {
+            background-color: $accent-one;
+        }
+
+        .operating {
+            background-color: $accent-two;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .main-container .calculator {
+        width: 250px;
+        height: 400px;
+    }
+}
