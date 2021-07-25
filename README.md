@@ -1,4 +1,4 @@
-# Simple JavaScript image carousel #
+# Vanilla JavaScript calculator #
 ![Project preview](https://i.imgur.com/izBePHf.jpg)
 
 ---
