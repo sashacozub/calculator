@@ -1,5 +1,5 @@
 # Simple JavaScript image carousel #
-![Project preview](https://i.imgur.com/YAjQiYU.png)
+![Project preview](https://i.imgur.com/izBePHf.jpg)
 
 ---
 ## Project's aim ##
