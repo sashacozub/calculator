@@ -3,7 +3,7 @@
 
 ---
 ## Project's aim ##
-This calculator was made in order to test advance my JavaScript skills.
+This calculator was made in order to test and advance my JavaScript skills.
 
 ## Technologies ##
 This project was made with:
