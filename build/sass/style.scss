@@ -19,6 +19,7 @@ body {
     width: 100%;
     font-family: 'Roboto Mono', monospace;
     font-weight: 200;
+    touch-action: manipulation;
 }
 
 .main-container {
