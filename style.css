@@ -38,7 +38,7 @@ body {
 
 .main-container::before {
   content: '';
-  background: url("../img/palms.png");
+  background: url("./img/palms.png");
   width: 100%;
   height: 100%;
   position: absolute;
